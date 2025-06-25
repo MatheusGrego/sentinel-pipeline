@@ -56,14 +56,14 @@ graph TD
 ```
 🛠️ Tecnologias Utilizadas
 
-Linguagem: Java 17+
-Framework Principal: Spring Boot 3
-Microsserviços: Spring Cloud Gateway, Spring Cloud (Eureka)
-Comunicação Assíncrona: Spring Cloud AWS SQS
-Armazenamento de Objetos: Spring Cloud AWS S3
-Banco de Dados: PostgreSQL
-Containerização: Docker & Docker Compose
-Simulador de Nuvem: LocalStack
+- Linguagem: Java 17+
+- Framework Principal: Spring Boot 3
+- Microsserviços: Spring Cloud Gateway, Spring Cloud (Eureka)
+- Comunicação Assíncrona: Spring Cloud AWS SQS
+- Armazenamento de Objetos: Spring Cloud AWS S3
+- Banco de Dados: PostgreSQL
+- Containerização: Docker & Docker Compose
+- Simulador de Nuvem: LocalStack
 
 ## 🚀 Como Executar
 
