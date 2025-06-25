@@ -2,8 +2,10 @@ package com.teteu.sentinel_pipeline.infraestructure.adapter.out.s3;
 
 import com.teteu.sentinel_pipeline.application.port.out.ImageStoragePort;
 import com.teteu.sentinel_pipeline.domain.model.ImageFile;
+import io.awspring.cloud.autoconfigure.s3.properties.S3Properties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.services.s3.S3Client;
@@ -14,7 +16,8 @@ import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 @RequiredArgsConstructor
 public class S3StorageAdapter implements ImageStoragePort {
     private final S3Client s3Client;
-    private final S3Properties s3Properties;
+    @Value("${spring.cloud.aws.s3.bucket}")
+    private String bucketName;
 
     @Override
     public String save(ImageFile imageFile) {
@@ -22,17 +25,17 @@ public class S3StorageAdapter implements ImageStoragePort {
 
         try {
             PutObjectRequest request = PutObjectRequest.builder()
-                    .bucket(s3Properties.getBucketName())
+                    .bucket(bucketName)
                     .key(key)
                     .contentType(imageFile.getContentType())
                     .build();
 
             s3Client.putObject(request, RequestBody.fromBytes(imageFile.getContent()));
 
-            log.info("File uploaded successfully to S3 Bucket: {}, Key: {}", s3Properties.getBucketName(), key);
+            log.info("File uploaded successfully to S3 Bucket: {}, Key: {}", bucketName, key);
         }catch (Exception e){
-            log.error("Error while uploading file to S3 Bucket: {}, Key: {}", s3Properties.getBucketName(), key, e);
-            throw new RuntimeException("Error while uploading file to S3 Bucket: " + s3Properties.getBucketName() + ", Key: " + key);
+            log.error("Error while uploading file to S3 Bucket: {}, Key: {}", bucketName, key, e);
+            throw new RuntimeException("Error while uploading file to S3 Bucket: " + bucketName + ", Key: " + key);
         }
         return key;
     }
