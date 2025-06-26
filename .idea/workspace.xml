@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="15574b3d-abe0-45e1-a40a-fa6032c9b755" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sentinel-pipeline.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ARCHITECTURE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMPLEMENTATION_PLAN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROJECT_VISION.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-erver/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-erver/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-erver/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-erver/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-erver/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-erver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-erver/src/main/java/com/teteu/eurekaerver/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/teteu/eurekaerver/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-erver/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-erver/src/test/java/com/teteu/eurekaerver/EurekaServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/teteu/eurekaerver/EurekaServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/SentinelPipelineApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/SentinelPipelineApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/application/port/in/IngestImageUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/application/port/in/IngestImageUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/application/port/out/ImageEventPublisherPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/application/port/out/ImageEventPublisherPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/application/port/out/ImageStoragePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/application/port/out/ImageStoragePort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/application/port/usecase/IngestImageUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/application/port/usecase/IngestImageUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/domain/model/ImageFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/domain/model/ImageFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/config/S3ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/config/S3ClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/ImageIngestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/ImageIngestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/constants/ApiResponseMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/constants/ApiResponseMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/constants/SwaggerResponses.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/constants/SwaggerResponses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/dto/IngestImageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/dto/IngestImageRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/dto/IngestImageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/dto/IngestImageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/swagger/annotations/BadRequestResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/swagger/annotations/BadRequestResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/swagger/annotations/InternalServerErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/swagger/annotations/InternalServerErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/swagger/annotations/OkResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/swagger/annotations/OkResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/out/s3/S3StorageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/out/s3/S3StorageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/out/sqs/SqsImageEventPublisherAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/out/sqs/SqsImageEventPublisherAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/out/sqs/dto/SqsImageMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/java/com/teteu/sentinel_pipeline/infraestructure/adapter/out/sqs/dto/SqsImageMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/test/java/com/teteu/sentinel_pipeline/SentinelPipelineApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/test/java/com/teteu/sentinel_pipeline/SentinelPipelineApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/test/java/com/teteu/sentinel_pipeline/application/port/usecase/IngestImageUseCaseImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/test/java/com/teteu/sentinel_pipeline/application/port/usecase/IngestImageUseCaseImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentinel-pipeline/src/test/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/ImageIngestionControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ingestion-service/src/test/java/com/teteu/sentinel_pipeline/infraestructure/adapter/in/web/ImageIngestionControllerTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MatheusGrego"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MatheusGrego/sentinel-pipeline.git",
+    "accountId": "db985878-eccd-419a-b3c0-f5847c165bab"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2z1wBopG7YMqFTwZdNx1rWFfXAn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="sentinel-pipeline" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="sentinel-pipeline" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.teteu.eurekaerver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SentinelPipelineApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="sentinel-ingestion-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.teteu.sentinel_pipeline.SentinelPipelineApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26927.53" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15574b3d-abe0-45e1-a40a-fa6032c9b755" name="Changes" comment="" />
+      <created>1750911754508</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750911754508</updated>
+      <workItem from="1750911756118" duration="298000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

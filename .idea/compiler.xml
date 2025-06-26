@@ -2,28 +2,21 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-erver" />
-      </profile>
-      <profile name="Annotation profile for sentinel-ingestion-service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
-        </processorPath>
-        <module name="sentinel-pipeline" />
+        <module name="eureka-server" />
+        <module name="analysis-service" />
+        <module name="sentinel-ingestion-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="eureka-erver" options="-parameters" />
-      <module name="sentinel-pipeline" options="-parameters" />
+      <module name="analysis-service" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="sentinel-ingestion-service" options="-parameters" />
     </option>
   </component>
 </project>

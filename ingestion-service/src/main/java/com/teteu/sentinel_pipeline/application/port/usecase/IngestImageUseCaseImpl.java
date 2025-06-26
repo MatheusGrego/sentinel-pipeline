@@ -20,9 +20,6 @@ public class IngestImageUseCaseImpl implements IngestImageUseCase {
     @Override
     public String ingestImage(ImageFile imageFile) {
         String imageId = imageStoragePort.save(imageFile);
-
-        // Passo 2: Com o ID da imagem salva, delega a responsabilidade de publicar o evento.
-        // A implementação real (SQSAdapter) cuidará de enviar a mensagem.
         imageEventPublisherPort.publishImageIngestedEvent(imageId, imageFile.getName());
 
         return imageId;
@@ -38,9 +35,9 @@ public class IngestImageUseCaseImpl implements IngestImageUseCase {
                     file.getSize(),
                     file.getBytes()
             );
-            return ingestImage(imageFile); // Chama o método principal
+            return ingestImage(imageFile);
         } catch (IOException e) {
-            throw new RuntimeException("Erro ao processar o arquivo de imagem: " + e.getMessage(), e);
+            throw new RuntimeException("Error while processing image file: " + e.getMessage(), e);
         }
     }
 
