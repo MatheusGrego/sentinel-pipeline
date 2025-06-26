@@ -11,6 +11,10 @@ import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.UUID;
+
 @Component
 @Slf4j
 @RequiredArgsConstructor
@@ -23,14 +27,15 @@ public class S3StorageAdapter implements ImageStoragePort {
     public String save(ImageFile imageFile) {
         String key = generateKey(imageFile);
 
-        try {
+        try (InputStream inputStream = new ByteArrayInputStream(imageFile.getContent())) {
+
             PutObjectRequest request = PutObjectRequest.builder()
                     .bucket(bucketName)
                     .key(key)
                     .contentType(imageFile.getContentType())
                     .build();
 
-            s3Client.putObject(request, RequestBody.fromBytes(imageFile.getContent()));
+            s3Client.putObject(request, RequestBody.fromInputStream(inputStream, imageFile.getContent().length));
 
             log.info("File uploaded successfully to S3 Bucket: {}, Key: {}", bucketName, key);
         }catch (Exception e){
@@ -41,6 +46,6 @@ public class S3StorageAdapter implements ImageStoragePort {
     }
 
     private String generateKey(ImageFile imageFile){
-        return imageFile.getName() + "_" + System.currentTimeMillis();
+        return UUID.randomUUID() + "-" + imageFile.getName();
     }
 }

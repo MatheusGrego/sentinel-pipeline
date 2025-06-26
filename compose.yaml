@@ -1,0 +1,24 @@
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack_sentinel
+    ports:
+      - "4566:4566"            # Porta principal para os serviços AWS
+      - "4510-4559:4510-4559"  # Range para serviços externos (opcional, mas bom ter)
+
+    environment:
+      - SERVICES=s3,sqs
+      - DEFAULT_REGION=us-east-1
+      # A LINHA ABAIXO É NOVA E AJUDA NA PERSISTÊNCIA
+      - PERSISTENCE=1
+    volumes:
+        # AQUI ESTÁ A MÁGICA:
+        # Mapeamos o diretório de dados do LocalStack para um volume nomeado
+        # gerenciado pelo Docker. Isso garante que os dados não sejam perdidos.
+      - "localstack_data:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+    # Aqui definimos o volume nomeado que usamos acima.
+    # O Docker cuidará de criar e gerenciar esta "pasta" persistente.
+volumes:
+  localstack_data:

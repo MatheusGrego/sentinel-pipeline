@@ -32,6 +32,7 @@ public class S3ClientConfig {
                 .credentialsProvider(StaticCredentialsProvider.create(
                         AwsBasicCredentials.create(accessKey, secretKey)))
                 .endpointOverride(URI.create(endpointUrl)) // Para LocalStack (caso necessário)
+                .forcePathStyle(true)
                 .region(Region.of(region))
                 .build();
     }

@@ -1,6 +1,8 @@
 package com.teteu.sentinel_pipeline.infraestructure.adapter.out.sqs;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.teteu.sentinel_pipeline.application.port.out.ImageEventPublisherPort;
+import com.teteu.sentinel_pipeline.infraestructure.adapter.out.sqs.dto.SqsImageMessage;
 import io.awspring.cloud.sqs.operations.SqsTemplate;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,15 +15,17 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class SqsImageEventPublisherAdapter implements ImageEventPublisherPort {
     private final SqsTemplate sqsTemplate;
+    private final ObjectMapper objectMapper;
     @Value("${spring.cloud.aws.sqs.queue-name}")
     private String queueName;
 
     @Override
     public void publishImageIngestedEvent(String imageId, String originalFilename) {
-        String message = String.format("Image %s with name %s was ingested successfully!", imageId, originalFilename);
+        SqsImageMessage message = new SqsImageMessage(imageId, originalFilename, "ingested");
 
         try {
-            sqsTemplate.send(queueName, MessageBuilder.withPayload(message).build());
+            String jsonMessage = objectMapper.writeValueAsString(message);
+            sqsTemplate.sendAsync(queueName, MessageBuilder.withPayload(jsonMessage).build());
             log.info("Message published successfully to SQS Queue: {}", queueName);
         } catch (Exception e) {
             log.error("Error while publishing message to SQS Queue: {}", queueName, e);
@@ -29,3 +33,4 @@ public class SqsImageEventPublisherAdapter implements ImageEventPublisherPort {
         }
     }
 }
+

@@ -109,6 +109,7 @@ Pronto! Seu ambiente está configurado e pronto para receber requisições.
 <details>
 <summary>Clique para ver o código do script 🐍: <code>setup_local_aws.py</code></summary>
 
+
 ```python
 # setup_local_aws.py
 import boto3
