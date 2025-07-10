@@ -1,24 +1,39 @@
+# docker-compose.yml (VERSÃO FINAL E CORRIGIDA)
+version: '3.8'
+
 services:
+  # Serviço do LocalStack para simular a AWS
   localstack:
     image: localstack/localstack:latest
     container_name: localstack_sentinel
     ports:
-      - "4566:4566"            # Porta principal para os serviços AWS
-      - "4510-4559:4510-4559"  # Range para serviços externos (opcional, mas bom ter)
-
+      - "4566:4566"
+      - "4510-4559:4510-4559"
     environment:
       - SERVICES=s3,sqs
       - DEFAULT_REGION=us-east-1
-      # A LINHA ABAIXO É NOVA E AJUDA NA PERSISTÊNCIA
       - PERSISTENCE=1
     volumes:
-        # AQUI ESTÁ A MÁGICA:
-        # Mapeamos o diretório de dados do LocalStack para um volume nomeado
-        # gerenciado pelo Docker. Isso garante que os dados não sejam perdidos.
       - "localstack_data:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
 
-    # Aqui definimos o volume nomeado que usamos acima.
-    # O Docker cuidará de criar e gerenciar esta "pasta" persistente.
+  # Serviço do Banco de Dados PostgreSQL
+  postgres:
+    image: postgres:14-alpine
+    container_name: postgres_sentinel
+    environment:
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_USER=myuser
+    ports:
+      # AQUI ESTÁ A CORREÇÃO: Mapeando a porta 5432 do contêiner
+      # para a porta 5432 da sua máquina.
+      - "5432:5432"
+    volumes:
+      # Habilitando a persistência de dados para o Postgres
+      - "postgres_data:/var/lib/postgresql/data"
+
+# Seção de volumes nomeados para persistir os dados
 volumes:
   localstack_data:
+  postgres_data: # <--- DESCOMENTEI AQUI PARA ATIVAR A PERSISTÊNCIA
